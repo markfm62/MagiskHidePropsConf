@@ -5,7 +5,7 @@
 
 **If anyone feels like taking over give me a holler.**
 
-Branched from Didgeridoohan repository to refresh Samsung-related fingerprints so newer phones will have functional Google Wallet.
+Branched from Didgeridoohan repository to refresh Samsung-related fingerprints so newer phones will have functional Google Wallet.  Install this module after installing the chiteroman PlayIntegrityFix **v14.9**
 
 <a href="https://forum.xda-developers.com/apps/magisk/module-magiskhide-props-config-t3789228"><img src="https://img.shields.io/badge/-XDA-orange.svg"></a> [Support Thread](https://forum.xda-developers.com/apps/magisk/module-magiskhide-props-config-t3789228)
 
