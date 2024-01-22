@@ -1,9 +1,9 @@
 #!/system/bin/sh
 
 # MagiskHide Props Config
-# Copyright (c) 2018-2021 Didgeridoohan @ XDA Developers
+# Copyright (c) 2018-2024 Didgeridoohan @ XDA Developers, markfm
 # Licence: MIT
-
+# Samsung fingerprints with "S21 Spoof" must be the last listed item of a base model (e.g., G901) for automatic install to pick them
 PRINTSV=137
 PRINTSTRANSF=520
 
@@ -291,7 +291,8 @@ Samsung Galaxy A5 2017 SM-A520F (8.0.0):Samsung:SM-A520F=samsung/a5y17ltexx/a5y1
 Samsung Galaxy A6 SM-A600F (10):Samsung:SM-A600F=samsung/a6ltexx/a6lte:10/QP1A.190711.020/A600FNXXS7CTI1:user/release-keys__2020-09-01
 Samsung Galaxy A6 Plus SM-A605G (9):Samsung:SM-A605G=samsung/a6pltedx/a6plte:9/PPR1.180610.011/A605GDXU3BSC6:user/release-keys__2019-03-01
 Samsung Galaxy A7 2017 SM-A720F (8.0.0):Samsung:SM-A720F=samsung/a7y17ltexx/a7y17lte:8.0.0/R16NW/A720FXXU9CSK3:user/release-keys__2019-12-01
-Samsung Galaxy A7 2018 SM-A750GN (9 & 10):samsung:SM-A750GN=samsung/a7y18ltedx/a7y18lte:9/PPR1.180610.011/A750GNDXU2BSD2:user/release-keys__2019-04-01;samsung/a7y18ltedx/a7y18lte:10/QP1A.190711.020/A750GNDXU6CUA1:user/release-keys__2021-01-01
+Samsung Galaxy A7 2018 SM-A750GN (9):samsung:SM-A750GN=samsung/a7y18ltedx/a7y18lte:9/PPR1.180610.011/A750GNDXU2BSD2:user/release-keys__2019-04-01
+Samsung Galaxy A7 2018 SM-A750GN (10):samsung:SM-A750GN=samsung/a7y18ltedx/a7y18lte:10/QP1A.190711.020/A750GNDXU6CUA1:user/release-keys__2021-01-01
 Samsung Galaxy A8 Plus SM-A730F (7.1.1):Samsung:SM-A730F=samsung/jackpot2ltexx/jackpot2lte:7.1.1/NMF26X/A730FXXU2ARD1:user/release-keys
 Samsung Galaxy A20 SM-A205W (9):Samsung:SM-A205W=samsung/a20cs/a20:9/PPR1.180610.011/A205WVLU3ASK2:user/release-keys__2019-11-01
 Samsung Galaxy A40 SM-A405FN (10):Samsung:SM-A405FN=samsung/a40xx/a40:10/QP1A.190711.020/A405FNXXS3BTI3:user/release-keys__2020-09-01
@@ -326,9 +327,9 @@ Samsung Galaxy Note 10 Plus SM-N9750 (10):Samsung:SM-N9750=samsung/d2qzh/d2q:10/
 Samsung Galaxy Note 10 Plus SM-N975F (10):Samsung:SM-N975F=samsung/d2sxx/d2s:10/QP1A.190711.020/N975FXXU1BSL7:user/release-keys__2019-12-01
 Samsung Galaxy Note 10 Plus SM-N975U (10):Samsung:SM-N975U=samsung/d2qsq/d2q:10/QP1A.190711.020/N975USQU2BTA1:user/release-keys__2020-01-01
 Samsung Galaxy Note 10.1 2014 SM-P600 (5.1.1):Samsung:SM-P600=samsung/lt03wifixx/lt03wifi:5.1.1/LMY47X/P600XXUDOJ3:user/release-keys
-Samsung Galaxy Note 20 Ultra SM-N986U (10):Samsung:SM-N986U=samsung/c2qsqw/c2q:10/QP1A.190711.020/N986USQU1ATH3:user/release-keys__2020-08-01
-Samsung Galaxy Note 20 Ultra 5G SM-N9860 (10):Samsung:SM-N9860=samsung/c2qzhx/c2q:10/QP1A.190711.020/N9860ZSU1ATJ6:user/release-keys__2020-09-01
+Samsung Galaxy Note 20 SM-N9810 (10):Samsung:Samsung:SM-N9810=samsung/c1qzhx/c1q:10/QP1A.190711.020/N9810ZSU1ATH1:user/release-keys__2020-08-01
 Samsung Galaxy Note 20 Ultra 5G SM-N986B/DS (10):samsung:SM-N986B=samsung/c2sxxx/c2s:10/QP1A.190711.020/N986BXXU1ATJ1:user/release-keys__2020-10-01
+Samsung Galaxy Note 20 Ultra 5G SM-N9860 (10):Samsung:SM-N9860=samsung/c2qzhx/c2q:10/QP1A.190711.020/N9860ZSU1ATJ6:user/release-keys__2020-09-01
 Samsung Galaxy S3 Neo GT-I9300I (4.4.4):Samsung:GT-I9300I=samsung/s3ve3gdd/s3ve3gdd:4.4.4/KTU84P/I9300IDDUBQE2:user/release-keys
 Samsung Galaxy S4 GT-I9505 (5.0.1):Samsung:GT-I9505=samsung/jfltexx/jflte:5.0.1/LRX22C/I9505XXUHPF4:user/release-keys
 Samsung Galaxy S4 Active GT-I9295 (5.0.1):Samsung:GT-I9295=samsung/jactiveltexx/jactivelte:5.0.1/LRX22C/I9295XXSDQD6:user/release-keys
@@ -340,25 +341,47 @@ Samsung Galaxy S7 SM-G930F (8.0.0):Samsung:SM-G930F=samsung/heroltexx/herolte:8.
 Samsung Galaxy S7 Edge SM-G935F (8.0.0):Samsung:SM-G935F=samsung/hero2ltexx/hero2lte:8.0.0/R16NW/G935FXXS4ESC3:user/release-keys__2019-03-01
 Samsung Galaxy S8 SM-G950F (8.0.0):Samsung:SM-G950F=samsung/dreamltexx/dreamlte:8.0.0/R16NW/G950FXXU1CRC7:user/release-keys
 Samsung Galaxy S8 Plus SM-G955F (8.0.0):Samsung:SM-G955F=samsung/dream2ltexx/dream2lte:8.0.0/R16NW/G955FXXU1CRC7:user/release-keys
-Samsung Galaxy S9 SM-G960F (8.0.0 & 10):Samsung:SM-G960F=samsung/starltexx/starlte:8.0.0/R16NW/G960FXXU1ARCC:user/release-keys;samsung/starltexx/starlte:10/QP1A.190711.020/G960FXXSDFTL1:user/release-keys__2021-01-01
+Samsung Galaxy S9 SM-G960F (8.0.0):Samsung:SM-G960F=samsung/starltexx/starlte:8.0.0/R16NW/G960FXXU1ARCC:user/release-keys
+Samsung Galaxy S9 SM-G960F (10):Samsung:SM-G960F=samsung/starltexx/starlte:10/QP1A.190711.020/G960FXXSDFTL1:user/release-keys__2021-01-01
 Samsung Galaxy S9 Plus SM-G965F (8.0.0):Samsung:SM-G965F=samsung/star2ltexx/star2lte:8.0.0/R16NW/G965FXXU1ARCC:user/release-keys
-Samsung Galaxy S10 SM-G973F (10 & 11):Samsung:SM-G973F=samsung/beyond1ltexx/beyond1:10/QP1A.190711.020/G973FXXS3BSL4:user/release-keys__2020-01-01;samsung/beyond1ltexx/beyond1:11/RP1A.200720.012/G973FXXSBFUF3:user/release-keys__2021-07-01
+Samsung Galaxy S10 SM-G973F (10):Samsung:SM-G973F=samsung/beyond1ltexx/beyond1:10/QP1A.190711.020/G973FXXS3BSL4:user/release-keys__2020-01-01
+Samsung Galaxy S10 SM-G973F (11):Samsung:SM-G973F=samsung/beyond1ltexx/beyond1:11/RP1A.200720.012/G973FXXSBFUF3:user/release-keys__2021-07-01
 Samsung Galaxy S10 SM-G973F Europe (11):Samsung:SM-G973F=samsung/beyond1lteeea/beyond1:11/RP1A.200720.012/G973FXXSBFUF3:user/release-keys__2021-07-01
 Samsung Galaxy S10 SM-G973N (11):Samsung:SM-G973N=samsung/beyond1lteks/beyond1:11/RP1A.200720.012/G973NKSU6FUF5:user/release-keys__2021-07-01
 Samsung Galaxy S10 5G SM-G977B (11):Samsung:SM-G977B=samsung/beyondxxx/beyondx:11/RP1A.200720.012/G977BXXS8FUF3:user/release-keys__2021-07-01
 Samsung Galaxy S10 5G SM-G977N (11):Samsung:SM-G977N=samsung/beyondxks/beyondx:11/RP1A.200720.012/G977NKSU5FUF5:user/release-keys__2021-07-01
 Samsung Galaxy S10 Lite SM-G770F (11):Samsung:SM-G770F=samsung/r5qnsxx/r5q:11/RP1A.200720.012/G770FXXS4EUF6:user/release-keys__2021-07-01
-Samsung Galaxy S10 Plus SM-G975F (10 & 11):Samsung:SM-G975F=samsung/beyond2ltexx/beyond2:10/QP1A.190711.020/G975FXXU3BSKO:user/release-keys__2019-12-01;samsung/beyond2ltexx/beyond2:11/RP1A.200720.012/G975FXXSBFUF3:user/release-keys__2021-07-01
+Samsung Galaxy S10 Plus SM-G975F (10):Samsung:SM-G975F=samsung/beyond2ltexx/beyond2:10/QP1A.190711.020/G975FXXU3BSKO:user/release-keys__2019-12-01
+Samsung Galaxy S10 Plus SM-G975F (11):Samsung:SM-G975F=samsung/beyond2ltexx/beyond2:11/RP1A.200720.012/G975FXXSBFUF3:user/release-keys__2021-07-01
 Samsung Galaxy S10 Plus SM-G975F Europe (11):Samsung:SM-G975F=samsung/beyond2lteeea/beyond2:11/RP1A.200720.012/G975FXXSBFUF3:user/release-keys__2021-07-01
 Samsung Galaxy S10 Plus SM-G975N (11):Samsung:SM-G975N=samsung/beyond2lteks/beyond2:11/RP1A.200720.012/G975NKSU6FUF5:user/release-keys__2021-07-01
 Samsung Galaxy S10 Plus SM-G975U (9):Samsung:SM-G975U=samsung/beyond2qlteue/beyond2q:9/PPR1.180610.011/G975U1UEU1ASD3:user/release-keys__2019-03-01
-Samsung Galaxy S10e SM-G970F (10 & 11):Samsung:SM-G970F=samsung/beyond0ltexx/beyond0:10/QP1A.190711.020/G970FXXS9DTK9:user/release-keys__2020-12-01;samsung/beyond0ltexx/beyond0:11/RP1A.200720.012/G970FXXSBFUF3:user/release-keys__2021-07-01
+Samsung Galaxy S10e SM-G970F (10):Samsung:SM-G970F=samsung/beyond0ltexx/beyond0:10/QP1A.190711.020/G970FXXS9DTK9:user/release-keys__2020-12-01
+Samsung Galaxy S10e SM-G970F (11):Samsung:SM-G970F=samsung/beyond0ltexx/beyond0:11/RP1A.200720.012/G970FXXSBFUF3:user/release-keys__2021-07-01
 Samsung Galaxy S10e SM-G970F Europe (11):Samsung:SM-G970F=samsung/beyond0lteeea/beyond0:11/RP1A.200720.012/G970FXXSBFUF3:user/release-keys__2021-07-01
-Samsung Galaxy S10e SM-G970N (10 & 11):Samsung:SM-G970N=samsung/beyond0lteks/beyond0:10/QP1A.190711.020/G970NKSU4CTC9:user/release-keys__2020-04-01;samsung/beyond0lteks/beyond0:11/RP1A.200720.012/G970NKSU6FUF5:user/release-keys__2021-07-01
+Samsung Galaxy S10e SM-G970N (10):Samsung:SM-G970N=samsung/beyond0lteks/beyond0:10/QP1A.190711.020/G970NKSU4CTC9:user/release-keys__2020-04-01
+Samsung Galaxy S10e SM-G970N (11):Samsung:SM-G970N=samsung/beyond0lteks/beyond0:11/RP1A.200720.012/G970NKSU6FUF5:user/release-keys__2021-07-01
 Samsung Galaxy S20 FE SM-G780F (11):Samsung:SM-G780F=samsung/r8sxx/r8s:11/RP1A.200720.012/G780FXXU5CUH1:user/release-keys__2021-08-01
 Samsung Galaxy S20 FE 5G SM-G781B (10):samsung:SM-G781B=samsung/r8qxxx/r8q:10/QP1A.190711.020/G781BXXU1ATJ5:user/release-keys__2020-10-01
-Samsung Galaxy S20 Ultra SM-G988B (10):Samsung:SM-G988B=samsung/z3sxxx/z3s:10/QP1A.190711.020/G988BXXU1ATCT:user/release-keys__2020-04-01
-Samsung Galaxy S21 SM-G991B (11):Samsung:SMG991B=samsung/o1sxxx/o1s:11/RP1A.200720.012/G991BXXU3AUE1:user/release-keys__2021-05-01
+Samsung Galaxy S20 SM-G9810 (10):Samsung:SM-G9810=samsung/x1qzhx/x1q:10/QP1A.190711.020/G9810ZHS1ATF6:user/release-keys__2020-06-01
+Samsung Galaxy S20 Plus SM-G9860 (10):Samsung:SM-G9860=samsung/y2qzhx/y2q:10/QP1A.190711.020/G9860ZHS1ATF6:user/release-keys__2020-06-01
+Samsung Galaxy S20 Plus S21 Spoof SM-G9860 (11):Samsung:SM-G9960=samsung/t2qzhx/t2q:11/RP1A.200720.012/G9960ZHU1AUB7:user/release-keys__2021-03-01
+Samsung Galaxy S20 Ultra SM-G9880 (10):Samsung:SM-G9880=samsung/z3qzhx/z3q:10/QP1A.190711.020/G9880ZHS1ATF6:user/release-keys__2020-06-01
+Samsung Galaxy S21 SM-G9910 (11):Samsung:SM-G9910=samsung/o1qzhx/o1q:11/RP1A.200720.012/G9910ZHU1AUB7:user/release-keys__2021-03-01
+Samsung Galaxy S21 Plus SM-G9960 (11):Samsung:SM-G9960=samsung/t2qzhx/t2q:11/RP1A.200720.012/G9960ZHU1AUB7:user/release-keys__2021-03-01
+Samsung Galaxy S21 Ultra SM-G9980 (11):Samsung:SM-G9980=samsung/p3qzhx/p3q:11/RP1A.200720.012/G9980ZHU1AUB7:user/release-keys__2021-03-01
+Samsung Galaxy S22 SM-S9010 (12):Samsung:SM-S9810=samsung/r0qzhx/qssi:12/SP1A.210812.016/S9010ZHU1AVCK:user/release-keys__2022-04-01
+Samsung Galaxy S22 S21 Spoof SM-S9010 (11):Samsung:SM-G9910=samsung/o1qzhx/o1q:11/RP1A.200720.012/G9910ZHU1AUB7:user/release-keys__2021-03-01
+Samsung Galaxy S22 Plus SM-S9060 (12):Samsung:SM-S9060=samsung/g0qzhx/qssi:12/SP1A.210812.016/S9060ZHU1AVCK:user/release-keys__2022-04-01
+Samsung Galaxy S22 Plus S21 Spoof SM-S9060 (11):Samsung:SM-G9960=samsung/t2qzhx/t2q:11/RP1A.200720.012/G9960ZHU1AUB7:user/release-keys__2021-03-01
+Samsung Galaxy S22 Ultra SM-S9080 (12):Samsung:SM-S9080=samsung/b0qzhx/qssi:12/SP1A.210812.016/S9080ZHU1AVCK:user/release-keys__2022-04-01
+Samsung Galaxy S22 Ultra S21 Spoof SM-S9080 (11):Samsung:SM-G9980=samsung/p3qzhx/p3q:11/RP1A.200720.012/G9980ZHU1AUB7:user/release-keys__2021-03-01
+Samsung Galaxy S23 SM-S9110 (13):Samsung:SM-S9110=samsung/dm1qzhx/qssi:13/TP1A.220624.014/S9110ZHS1AWD5:user/release-keys__2023-05-01
+Samsung Galaxy S23 S21 Spoof SM-S9110 (11):Samsung:SM-G9910=samsung/o1qzhx/o1q:11/RP1A.200720.012/G9910ZHU1AUB7:user/release-keys__2021-03-01
+Samsung Galaxy S23 Plus SM-S9160 (13):Samsung:SM-S9160=samsung/dm2qzhx/qssi:13/TP1A.220624.014/S9160ZHS1AWD5:user/release-keys__2023-05-01
+Samsung Galaxy S23 Plus S21 Spoof SM-S9160 (11):Samsung:SM-G9960=samsung/t2qzhx/t2q:11/RP1A.200720.012/G9960ZHU1AUB7:user/release-keys__2021-03-01
+Samsung Galaxy S23 Ultra SM-S9180 (13):Samsung:SM-S9180=samsung/dm3qzhx/qssi:13/TP1A.220624.014/S9180ZHU1AWCA:user/release-keys__2023-04-01
+Samsung Galaxy S23 Ultra S21 Spoof SM-S9180 (11):Samsung:SM-G9980=samsung/p3qzhx/p3q:11/RP1A.200720.012/G9980ZHU1AUB7:user/release-keys__2021-03-01
 Samsung Galaxy Tab 2 7.0 GT-P5110 (4.2.2):Samsung:GT-P5110=samsung/espresso10wifixx/espresso10wifi:4.2.2/JDQ39/P5110XXDML1:user/release-keys
 Samsung Galaxy Tab 4 7.0 SM-T230NU (4.4.2):samsung:SM-T230NU=samsung/degaswifiue/degaswifiue:4.4.2/KOT49H/T230NUUEU0APA1:user/release-keys
 Samsung Galaxy Tab 4 8.0 SM-T330NU (5.1.1):samsung:SM-T330NU=samsung/milletwifiue/milletwifiue:5.1.1/LMY47X/T330NUUES1BPL1:user/release-keys
@@ -374,7 +397,9 @@ Samsung Galaxy Tab S3 LTE SM-T825 (8.0.0):Samsung:SM-T825=samsung/gts3lltexx/gts
 Samsung Galaxy Tab S4 WiFi SM-T830 (10):samsung:SM-T830=samsung/gts4lwifixx/gts4lwifi:10/QP1A.190711.020/T830XXU4CTF5:user/release-keys__2020-06-01
 Samsung Galaxy Tab S4 LTE SM-T835 (10):samsung:SM-T835=samsung/gts4lltexx/gts4llte:10/QP1A.190711.020/T835XXU4CTF5:user/release-keys__2020-06-01
 Samsung Galaxy Tab S4 LTE SM-T837A (10):samsung:SM-T837A=samsung/gts4llteuc/gts4llteatt:10/QP1A.190711.020/T837AUCU5CUF1:user/release-keys__2021-03-01
-Samsung Galaxy Tab S5e SM-T720 (9 & 10 & 11):samsung:SM-T720=samsung/gts4lvwifixx/gts4lvwifi:9/PPR1.180610.011/T720XXS1ASL3:user/release-keys__2020-01-01;samsung/gts4lvwifixx/gts4lvwifi:10/QP1A.190711.020/T720XXU1BTG3:user/release-keys__2020-06-01;samsung/gts4lvwifixx/gts4lvwifi:11/RP1A.200720.012/T720XXU2DUD3:user/release-keys__2021-03-01
+Samsung Galaxy Tab S5e SM-T720 (9):samsung:SM-T720=samsung/gts4lvwifixx/gts4lvwifi:9/PPR1.180610.011/T720XXS1ASL3:user/release-keys__2020-01-01
+Samsung Galaxy Tab S5e SM-T720 (10):samsung:SM-T720=samsung/gts4lvwifixx/gts4lvwifi:10/QP1A.190711.020/T720XXU1BTG3:user/release-keys__2020-06-01
+Samsung Galaxy Tab S5e SM-T720 (11):samsung:SM-T720=samsung/gts4lvwifixx/gts4lvwifi:11/RP1A.200720.012/T720XXU2DUD3:user/release-keys__2021-03-01
 Samsung Galaxy Tab S6 Lite SM-P610 (10):samsung:SM-P610=samsung/gta4xlwifixx/gta4xlwifi:10/QP1A.190711.020/P610XXU2BTK2:user/release-keys__2020-12-01
 Samsung Galaxy Tab S7+ WiFi SM-T970 (11):Samsung:SM-T970=samsung/gts7xlwifixx/gts7xlwifi:11/RP1A.200720.012/T970XXU1BUAA:user/release-keys__2021-01-01
 Sony Xperia 5 DSDS J9210 (10):Sony:J9210=Sony/J9210_RU/J9210:10/55.1.A.9.52/055001A009005201481357772:user/release-keys__2020-07-01

@@ -1362,6 +1362,17 @@ get_device_used() {
 	PRINTTMP=$(cat $MODPATH/common/prints.sh | grep "$1")
 	if [ "$PRINTTMP" ]; then
 		echo -e "${C}$(get_device "$PRINTTMP" | sed "s| (.*||")${N}"
+		LeftString=$(get_device "$PRINTTMP" | sed "s| (.*||")  # *** MFM Test extracting the basic model, e.g., G986
+		SearchString="SM-"
+		ModelString=""
+		ModelString=${LeftString#*$SearchString}
+		echo -e "Full Model Designator: $ModelString"
+		FingerprintBaseModelString=""
+		FingerprintBaseModelString=${ModelString:0:4} # Only want the first 4 characters
+		echo -e "Fingerprint Base Model: $FingerprintBaseModelString"
+#		BL=$(getprop ro.boot.bootloader)
+#		DEVICE=${BL:0:4}
+#		echo -e "BL Base Model to Match Against: $DEVICE"
 		echo ""
 	elif [ -s "$CSTMPRINTS" ]; then
 		PRINTTMP=$(cat $CSTMPRINTS | grep "$1")
@@ -1653,6 +1664,32 @@ change_print() {
 	fi
 
 	after_change "$1" "$3" "$REBOOTCHK"
+}
+
+#change_print function for the main module installation - don't force a reboot in the call to after_change
+change_print_installer() {
+	before_change
+
+	log_handler "Changing device fingerprint to $2."
+
+	# Saves new module values
+	replace_fn MODULEFINGERPRINT "\"$MODULEFINGERPRINT\"" "\"$2\"" $LATEFILE
+
+	# Updates prop change variables in propsconf_late
+	replace_fn PRINTEDIT 0 1 $LATEFILE
+
+	# Set device simulation variables
+	print_parts "$2"
+
+	NEWFINGERPRINT=""
+
+	REBOOTCHK=""
+	# Check if fingerprints testing is active
+	if [ "$(get_file_value $PRINTSLOC "PRINTSV=")" == "Dev" ]; then
+		REBOOTCHK="noreboot"
+	fi
+
+	after_change "$1" "$3" "noreboot"
 }
 
 # Use vendor fingerprint, $1=header, $2=Current state of option (enabled or disabled)
